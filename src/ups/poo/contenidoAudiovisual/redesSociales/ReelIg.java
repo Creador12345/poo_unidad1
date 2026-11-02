@@ -1,6 +1,11 @@
 package ups.poo.contenidoAudiovisual.redesSociales;
 import uni1a.*;
 
+/*
+ * Autor: Jhon Zuñiga
+ * Fecha: 2/11/2026
+ * */
+
 public class ReelIg extends ContenidoAudiovisual {
 	private String cuenta;
 	private int cantidadVistas;
