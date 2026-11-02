@@ -40,9 +40,11 @@ public class Documental extends ContenidoAudiovisual {
         System.out.println("Tema: " + this.tema);
         
         // condición
-        if(investigador != null) {
-        	investigador.mostrarInfo();
-        } else { System.out.println("investigador: no asignado"); }
+		if (investigador != null) {
+			investigador.mostrarInfo();
+		} else {
+			System.out.println("Investigador: no asignado");
+		}
         
         System.out.println();
     }
