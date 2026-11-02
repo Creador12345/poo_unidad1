@@ -1,10 +1,11 @@
 package poo;
 import uni1a.*;
+import ups.poo.contenidoAudiovisual.redesSociales.*;
 
 public class PruebaAudioVisual {
     public static void main(String[] args) {
 
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
+        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[5];
 
         // Película con actores (agregación: los actores se crean afuera)
         Pelicula avatar = new Pelicula("Avatar", 125, "Accion", "20th Century Studios");
@@ -26,7 +27,11 @@ public class PruebaAudioVisual {
         cosmos.setInvestigador(inv);
         contenidos[2] = cosmos;
 
-        // Mostrar los detalles de cada contenido
+        // Nuevas subclases (herencia)
+        contenidos[3] = new VideoTikTok("Baile viral", 1, "Entretenimiento", "@usuario1", "Sonido original", 15000);
+        contenidos[4] = new ReelIg("Receta rapida", 1, "Cocina", "@chef_ec", 8200, "#recetas");
+
+        // Mostrar los detalles de cada contenido (polimorfismo)
         for (ContenidoAudiovisual contenido : contenidos) {
             contenido.mostrarDetalles();
         }
