@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>261</x>
+      <y>216</y>
+      <w>153</w>
+      <h>87</h>
+    </coordinates>
+    <panel_attributes>/uni1a::ContenidoAudiovisual/
+--
+-contar = 0: int
+-titulo: String
+-duracionEnMinutos: int
+-genero: String
+-id: int
+--
++ContenidoAudiovisual(String titulo, int duracionEnMinutos, String genero): ctor
++getTitulo(): String
++setTitulo(String titulo): void
++getDuracionEnMinutos(): int
++setDuracionEnMinutos(int duracionEnMinutos): void
++getGenero(): String
++setGenero(String genero): void
++getId(): int
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>147</x>
+      <y>12</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>uni1a::Actor
+--
+-nombre: String
+-pais: String
+-edad: int
+--
++Actor(String nombre, String pais, int edad): ctor
++getNombre(): String
++setNombre(String nombre): void
++getPais(): String
++setPais(String pais): void
++getEdad(): int
++setEdad(int edad): void
++mostrarInfo(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>474</x>
+      <y>24</y>
+      <w>141</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>uni1a::Investigador
+--
+-nombre: String
+-especialidad: String
+-institucion: String
+--
++Investigador(String nombre, String especialidad, String institucion): ctor
++getNombre(): String
++setNombre(String nombre): void
++getEspecialidad(): String
++setEspecialidad(String especialidad): void
++getInstitucion(): String
++setInstitucion(String institucion): void
++mostrarInfo(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>24</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>uni1a::Temporada
+--
+-numero: int
+-cantidadEpisodios: int
+-anioEstreno: int
+--
+~Temporada(int numero, int cantidadEpisodios, int anioEstreno): ctor
++getNumero(): int
++setNumero(int numero): void
++getCantidadEpisodios(): int
++setCantidadEpisodios(int cantidadEpisodios): void
++getAnioEstreno(): int
++setAnioEstreno(int añoEstreno): void
++mostrarInfo(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>333</y>
+      <w>216</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ups.poo.contenidoAudiovisual.redesSociales::ReelIg
+--
+-cuenta: String
+-cantidadVistas: int
+-hashtag: String
+--
++ReelIg(String titulo, int duracionEnMinutos, String genero, String cuenta, int cantidadVistas, String hashtag): ctor
++getCuenta(): String
++setCuenta(String cuenta): void
++getCantidadVistas(): int
++setCantidadVistas(int cantidadVistas): void
++getHashtag(): String
++setHashtag(String hashtag): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>333</y>
+      <w>225</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ups.poo.contenidoAudiovisual.redesSociales::VideoTikTok
+--
+-usuario: String
+-cantidadLikes: int
+-sonido: String
+--
++VideoTikTok(String titulo, int duracionEnMinutos, String genero, String usuario, String sonido, int cantidadLikes): ctor
++getUsuario(): String
++setUsuario(String usuario): void
++getCantidadLikes(): int
++setCantidadLikes(int catidadLikes): void
++getSonido(): String
++setSonido(String sonido): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>114</y>
+      <w>156</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>uni1a::Pelicula
+--
+-estudio: String
+--
++Pelicula(String titulo, int duracionEnMinutos, String genero, String estudio): ctor
++getEstudio(): String
++setEstudio(String estudio): void
++getActores(): ArrayList&lt;Actor&gt;
++agregarActor(Actor actor): void
++eliminarActor(Actor actor): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>120</y>
+      <w>159</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>uni1a::Documental
+--
+-tema: String
+--
++Documental(String titulo, int duracionEnMinutos, String genero, String tema): ctor
++getTema(): String
++setTema(String tema): void
++getInvestigador(): Investigador
++setInvestigador(Investigador investigador): void
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>120</y>
+      <w>150</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>uni1a::SerieDeTV
+--
+--
++SerieDeTV(String titulo, int duracionEnMinutos, String genero): ctor
++getTemporadas(): ArrayList&lt;Temporada&gt;
++agregarTemporada(int numero, int cantidadEpisodios, int anioEstreno): void
++getCantidadTemporadas(): int
++mostrarDetalles(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>234</y>
+      <w>69</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>poo::PruebaAudioVisual
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>255</x>
+      <y>168</y>
+      <w>57</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>162</y>
+      <w>24</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>393</x>
+      <y>168</y>
+      <w>84</w>
+      <h>57</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>255</x>
+      <y>294</y>
+      <w>42</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>363</x>
+      <y>297</y>
+      <w>57</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>213</x>
+      <y>78</y>
+      <w>30</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+agregación</panel_attributes>
+    <additional_attributes>10.0;130.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>84</y>
+      <w>39</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*
+composición</panel_attributes>
+    <additional_attributes>10.0;130.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>537</x>
+      <y>87</y>
+      <w>42</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..1
+asociación</panel_attributes>
+    <additional_attributes>100.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
